@@ -223,10 +223,8 @@ function vitePluginStorageProxy(): Plugin {
   };
 }
 
-const plugins = [react(), tailwindcss(), jsxLocPlugin(), vitePluginStorageProxy()];
-
 export default defineConfig({
-  plugins,
+  plugins: [react(), tailwindcss(), jsxLocPlugin(), vitePluginStorageProxy()],
   resolve: {
     alias: {
       "@": path.resolve(import.meta.dirname, "client", "src"),
